@@ -51,3 +51,71 @@ checkAge("William", 36);
 
 
 checkAge(`Peter`, 14);
+
+
+
+
+
+
+
+console.log(`ex 3 \n----------------`);
+
+function Cartesian(x, y) {
+    if (x > 0 && y > 0) {
+        return "Quadrant 1";
+    } else if (x < 0 && y > 0) {
+        return "Quadrant 2";
+    } else if (x < 0 && y < 0) {
+        return "Quadrant 3";
+    } else if (x > 0 && y < 0) {
+        return "Quadrant 4";
+    } else if (x === 0 && y !== 0) {
+        return "y-axis";
+    } else if (x !== 0 && y === 0) {
+        return "x-axis";
+    } else {
+        return "origin";
+    }
+
+}
+console.log (Cartesian(0, 0));
+console.log (Cartesian(1, 1));
+console.log (Cartesian(-1, -1));
+console.log (Cartesian(-1, 1));
+console.log (Cartesian(0, 0));
+
+
+
+console.log(`ex 4 \n------------------`)
+function isValidTriangle(a, b, c){
+return a + b > c || a + c > b || c + b > a
+}
+
+function checkTriangle(a, b, c){
+    let isValid = isValidTriangle (a, b, c);
+    if(isValid){
+        if(a == b && b == c){
+            return (`equallateral`)
+        }
+        else if (a === b || b === c || a === c) {
+            return "isosceles";
+        } else {
+            return "scalene";
+        }
+    } else {
+        return "Not a valid triangle";
+    }
+}
+
+
+            console.log(checkTriangle(3, 3, 4)); 
+            console.log(checkTriangle(3, 4, 5)); 
+            console.log(checkTriangle(1, 2, 3)); 
+            console.log(checkTriangle(3, 3, 3)); 
+
+    
+
+
+
+
+
